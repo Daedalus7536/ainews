@@ -109,8 +109,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         );
         Uri baseUri = Uri.parse(GUARDIAN_REQUEST_URL);
         Uri.Builder uriBuilder = baseUri.buildUpon();
-
-        uriBuilder.appendQueryParameter("orderby", orderBy);
         return new NewsLoader(this, uriBuilder.toString());
     }
 
